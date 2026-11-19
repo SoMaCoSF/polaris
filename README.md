@@ -36,6 +36,11 @@ flowchart LR
     D -->|next iteration| F[Rate all corpus, then re-issue]
 ```
 
+## Deployment receipt — v0.3.0 (2026-11-18)
+- Commit 6899be9 pushed to master (git-linked deploy)
+- Verified from outside: https://polaris.somacosf.com/ 200, sha1 0913c0e51dfa054291cc8ae75f778ca8aad3b268 byte-identical to site/index.html; name occurrences on the live page: 0; /assets/polaris-corpus.svg 200 (10,997 B); /motion/polaris.mp4 + .gif 200 (312,283 B GIF)
+- Motion: 20.000s exact (ffprobe), 240 frames @12fps, critic SHIP round 1; SVG cairosvg read-back clean, gold count exactly 2
+
 ## Deployment receipt (2026-11-18)
 - Repo: https://github.com/SoMaCoSF/polaris (public)
 - Vercel: project `polaris` prj_HCpSNe3AyzQ34pYfGAjM1dGggXNX, team SoMaCo, rootDirectory `site`, git-linked to master
