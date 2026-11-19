@@ -2,13 +2,13 @@
   SOM-DOC-10858-v1.0.0
   Ghost Catalog: SOM-DOC-10858
   Title: POLARIS APPLICANT DOSSIER
-  Page file_id: SOM-POL-0001-v0.1.0 · Category: APPLICANT-DOSSIER · Agent: boardy (substance) / witness (build)
+  Page file_id: SOM-POL-0001-v0.1.1 · Category: APPLICANT-DOSSIER · Agent: boardy (substance) / witness (build)
   Status: LIVE on founder GO 2026-11-18 21:29 PT · https://polaris.somacosf.com · repo SoMaCoSF/polaris
 -->
 
 # POLARIS — Applicant Dossier
 
-Sam Stave · Research Engineer, Polaris · Google DeepMind, Mountain View
+Research Engineer, Polaris · Google DeepMind, Mountain View
 Job: https://www.google.com/about/careers/applications/jobs/results/114077679900074694-research-engineer-polaris-deepmind
 
 **Premise:** One week per task. Six checks per task. Every claim graded.
