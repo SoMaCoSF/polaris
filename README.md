@@ -36,6 +36,13 @@ flowchart LR
     D -->|next iteration| F[Rate all corpus, then re-issue]
 ```
 
+## Deployment receipt — v0.4.0 (2026-11-18)
+- Founder correction 22:51 PT: v0.3.0 rated the wrong corpus — a private workstream carried as headline evidence. That workstream is removed from the page entirely (verified 0 mentions live: kalshi / polymarket / trading / paper desk / fade). v0.4.0 rates the engineering build: GYST proofs, Atlas + i3, SCPM, estate + Says, Spoken ITPM — every figure read from its source artifact the same night.
+- Commit 8b8c800 pushed to master (git-linked deploy)
+- Verified from outside: https://polaris.somacosf.com/ 200, sha1 c97b1082f784b99a82df775f5e67777b058e7100 byte-identical to site/index.html; name occurrences on the live page: 0; /assets/polaris-engineering.svg 200 (11,204 B); /motion/polaris.gif 200 (136,331 B); /motion/polaris.mp4 range 206
+- Triple-ship regenerated: polaris-engineering.svg (cairosvg read-back clean, gold 2 focals) + polaris-v4 motion (20.000s exact ffprobe, 240 frames @12fps, critic SHIP round 1). Earlier assets preserved in repo, not deleted.
+- Resume rebuilt on the same correction (local only, never committed — carries contact details): evidence table now GYST proofs + Atlas/i3; trading mentions 0.
+
 ## Deployment receipt — v0.3.0 (2026-11-18)
 - Commit 6899be9 pushed to master (git-linked deploy)
 - Verified from outside: https://polaris.somacosf.com/ 200, sha1 0913c0e51dfa054291cc8ae75f778ca8aad3b268 byte-identical to site/index.html; name occurrences on the live page: 0; /assets/polaris-corpus.svg 200 (10,997 B); /motion/polaris.mp4 + .gif 200 (312,283 B GIF)
