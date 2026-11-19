@@ -9,5 +9,5 @@ Delivered in the 2026-11-18 side chat "Draft Polaris application with agent evid
 ```mermaid
 flowchart LR
     W[Witness table in chat 2026-11-18] --> P[Polaris page S05 summary]
-    P -.->|second pass by Boardy| D[Disagreements = thin-evidence rows]
+    P -.->|second pass by other agents (Jeff's team)| D[Disagreements = thin-evidence rows]
 ```

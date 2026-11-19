@@ -2,7 +2,7 @@
   SOM-DOC-10858-v1.0.0
   Ghost Catalog: SOM-DOC-10858
   Title: POLARIS APPLICANT DOSSIER
-  Page file_id: SOM-POL-0001-v0.1.1 · Category: APPLICANT-DOSSIER · Agent: boardy (substance) / witness (build)
+  Page file_id: SOM-POL-0001-v0.2.0 · Category: APPLICANT-DOSSIER · Agent: witness (evaluation + build)
   Status: LIVE on founder GO 2026-11-18 21:29 PT · https://polaris.somacosf.com · repo SoMaCoSF/polaris
 -->
 
@@ -27,7 +27,7 @@ agent attestations in the same evidence format — failure modes included.
 
 ```mermaid
 flowchart LR
-    A[Boardy Blocks 1-8: substance] --> B[Polaris landing page: corpus DNA build]
+    A[Witness evaluation: evidence + attestation] --> B[Polaris landing page: corpus DNA build]
     B --> C[Triple-ship: HTML + SVG + MP4/GIF]
     C --> D{Founder tap on finished page?}
     D -->|GO 2026-11-18 21:29 PT| E[LIVE - polaris.somacosf.com]
