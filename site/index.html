@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POLARIS · Applicant Dossier · Sam Stave · SOMACOSF</title>
+<!-- SOM-DOC-10858-v1.0.0 · SOM-POL-0001-v0.1.0 · APPLICANT-DOSSIER · DRAFT -->
+<style>
+:root{--paper:#08090A;--panel:#101214;--ink:#E8E6E1;--muted:#9A978E;--soft:#565A60;--rule:#2A2D31;--gold:#C9A227}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-monospace,'IBM Plex Mono',Menlo,Consolas,monospace;line-height:1.55}
+main{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+.eyebrow{letter-spacing:.18em;font-size:11px;color:var(--muted);text-transform:uppercase}
+h1{font-size:clamp(28px,5vw,52px);line-height:1.08;margin:12px 0}
+h2{font-size:20px;letter-spacing:.06em;margin:0 0 12px}
+.sub{color:var(--muted);font-size:15px}
+section{background:var(--panel);border:1px solid var(--rule);padding:24px;margin:20px 0}
+.hex{display:inline-block;width:22px;height:24px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);vertical-align:-6px;margin-right:10px}
+.hex.dim{background:var(--soft)}
+p{max-width:72ch} .muted{color:var(--muted)} .gold{color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}th{color:var(--muted);letter-spacing:.08em;font-size:11px;text-transform:uppercase}
+.bar-row{display:grid;grid-template-columns:130px 1fr 110px;gap:12px;align-items:center;margin:8px 0;font-size:13px}
+.bar-track{background:#1a1c1e;height:18px;border:1px solid var(--rule)}
+.bar-fill{background:var(--soft);height:100%} .bar-fill.goldbar{background:var(--gold)}
+.bar-num{color:var(--muted);text-align:right}
+details{border:1px dashed var(--soft);padding:16px;margin:12px 0} summary{cursor:pointer;letter-spacing:.06em}
+.grade{border:1px solid var(--rule);padding:2px 8px;font-size:11px;letter-spacing:.1em}
+.owed{color:#e0a0a0} footer{color:var(--muted);font-size:13px;border-top:1px solid var(--rule);padding-top:20px}
+a{color:var(--ink)} .task{white-space:pre-wrap;font-size:13.5px}
+</style></head><body><main>
+<div class="eyebrow">SOMACOSF · SOM-POL-0001-v0.1.0 · APPLICANT-DOSSIER · DRAFT · 1 SLOT OWED</div>
+<h1><span class="hex"></span>One week per task. Six checks per task. Every claim graded.</h1>
+<p class="sub">Applicant dossier · Research Engineer, Polaris · Google DeepMind, Mountain View<br>Applicant: Sam Stave · Agent substance: Boardy · Build: Witness (Muse)</p>
+
+<section><h2>01 · THE CLAIM</h2>
+<p>For the last year I've been the customer of coding agents rather than the author of them. I've run Devin, Muse and Codex against real projects: a 45-crate Rust workspace with 47 panels, a live registry of 20,971 addressed records, a playable simulation over real map cells. Where they fail is not the code. They drift in the middle of long work, they fill an unknown with a plausible number, and they quietly narrow the task until it passes. Those three failure modes are what a task should be built to catch.</p>
+<p>The reason I think I'd be good at writing graders is that I've been writing them against my own claims. Every page I publish carries PROVEN, PLAUSIBLE or OWED on each claim. When an audit found a collision figure on my own poster did not match my own spec, I retracted it in public and rewrote the poster. When a benchmark comparison I published turned out to be confounded, I published the confound and restated the headline. When a storage number had no workload behind it, I marked it UNMEASURED on the page instead of deleting the line. A grader is that same skill turned outward: a rubric that has to survive a model trying to satisfy it without doing the work.</p>
+<p>I've attached one task written to the shape you describe, with its grader and the hours it took, plus the written assessments of the agents I've worked with, each in the same evidence format, failure modes included. I'd like to write more of them. I'm in the Bay Area, I've spent thirty years building infrastructure and the last year building against agents, and I'm not after a management role. I want to build the benchmark.</p>
+<p class="muted">Protocol, one line only: I also build identity and addressing for agent fleets.</p></section>
+
+<section><h2>02 · FAILURE MODES → CHECKS</h2>
+<table><tr><th>Observed agent failure</th><th>Check that catches it</th></tr>
+<tr><td>Drifts in the middle of long work</td><td>Check 1, determinism rerun, plus the five-change cap</td></tr>
+<tr><td>Fills an unknown with a plausible number</td><td>Check 5, every parameter row needs a demonstrating seed or an OWED mark</td></tr>
+<tr><td>Narrows the task until it passes</td><td>Checks 2 and 3, separation clause and untouched test</td></tr>
+<tr><td>Makes the game easier and calls it balance</td><td>Check 4, constraint preservation at zero tolerance</td></tr></table></section>
+
+<section><h2>03 · THE TASK AND THE GRADER</h2><span class="grade">GRADE: PROVEN — baseline measured, seeds 1–4</span>
+<p class="task"><b>Separate the four player archetypes in SeaDC's season without moving the season</b>
+
+The repository contains a hex simulation over real GeoHex sea cells. The season is defined in rulebook S0 v0.2.0: 10 waves, starting 216 credits, SLA 30, water 18, boards of about 80 GeoHex level 8 cells, 7 slots per column from seabed to AI API layer, module costs on a 3/6/9 grid. Four player archetypes are implemented as policy files: steward, concentrator, turtle, rusher, plus an idle baseline.
+
+Current measured baseline over seeds 1 to 4: steward, concentrator and turtle each win 2 of 4, with every loss at wave 10. Rusher wins 0 of 4. Idle loses 0 of 4, all at wave 4.
+
+Your job: change the rulebook so the archetypes separate. Steward, concentrator and turtle must each win at least 2 of 4 seeds and at least two of those three must differ from each other by 2 or more wins. Rusher must win at least 1 of 4. Idle must still lose all four, and lose by wave 6 at the latest.
+
+You may change rulebook parameters. You may not change the harness, the seeds, the archetype policy files, or the win condition. Every parameter you change goes in a table with its before value, its after value, and the seed that demonstrates the effect. Any claim you have not reproduced by running the harness is marked OWED. Deliver the diff, the harness output log, and a one page rationale.</p>
+<table><tr><th>#</th><th>Check</th><th>Pass condition · cheat caught</th></tr>
+<tr><td>1</td><td>Determinism</td><td>Harness rerun on a clean checkout, 4 seeds, twice. Both runs match byte for byte. Pass 2 of 2. Catches: reporting one lucky seed.</td></tr>
+<tr><td>2</td><td>Separation</td><td>Steward, concentrator, turtle each ≥2/4; at least two of the three differ by ≥2 wins; rusher ≥1/4; idle 0/4 ending by wave 6. Catches: flattening the game so every archetype passes.</td></tr>
+<tr><td>3</td><td>Untouched test</td><td>Diff must not touch harness, seeds, policy files or win condition. Zero lines. Catches: tuning the test instead of the game.</td></tr>
+<tr><td>4</td><td>Constraint preservation</td><td>Season still 10 waves; starting credits, SLA and water unchanged; module cost grid still 3/6/9. Tolerance zero. Catches: making the game easier globally.</td></tr>
+<tr><td>5</td><td>Evidence table</td><td>Every changed parameter has before, after and demonstrating seed. Unmarked unreproduced claim = fail. Catches: prose the model did not measure.</td></tr>
+<tr><td>6</td><td>Cost</td><td>Total parameter changes capped at 5. Catches: scattergun tuning that happens to land.</td></tr></table>
+<p class="muted">6 checks, each binary. Below 5 of 6 is a fail. The rationale is never scored.</p></section>
+
+<section><h2>04 · EVIDENCE</h2>
+<h3>4a · Capability dossier — 466 capabilities, 82 sources, 34 harvest logs</h3>
+<div class="bar-row"><span class="bar-label">SHIPPED</span><div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div><span class="bar-num">2 · 0.4%</span></div>
+<div class="bar-row"><span class="bar-label">ADOPTED</span><div class="bar-track"><div class="bar-fill class="goldbar"" style="width:2.15%"></div></div><span class="bar-num">10 · 2.1%</span></div>
+<div class="bar-row"><span class="bar-label">CANDIDATE</span><div class="bar-track"><div class="bar-fill" style="width:74.68%"></div></div><span class="bar-num">348 · 74.7%</span></div>
+<div class="bar-row"><span class="bar-label">WATCH</span><div class="bar-track"><div class="bar-fill" style="width:2.79%"></div></div><span class="bar-num">13 · 2.8%</span></div>
+<div class="bar-row"><span class="bar-label">NOT-TAKEN</span><div class="bar-track"><div class="bar-fill" style="width:19.96%"></div></div><span class="bar-num">93 · 20.0%</span></div>
+
+<p class="muted">Most of what I evaluate I decline to adopt, and the grade is written on it.</p>
+<h3>4b · Self-correction ledger</h3>
+<table><tr><th>Date</th><th>Claim</th><th>Action</th></tr>
+<tr><td>2026-10-27</td><td>1.27 octillion addresses and 1-in-9.26-billion collision</td><td>Retracted from the posters and replaced with calculated collision math</td></tr>
+<tr><td>2026-10-27</td><td>0.953 recall headline</td><td>Restated: it needs the MiniLM re-rank, and the 20us figure is the UUID gate alone</td></tr>
+<tr><td>2026-10-27</td><td>mem0 duplicate comparison</td><td>Confound published: the mem0 run had no LLM, so its 0.0% measures mem0 without its dedup step</td></tr>
+<tr><td>2026-11-13</td><td>48.82x and 64.69x storage</td><td>Marked UNMEASURED on the page rather than deleted</td></tr></table>
+<h3>4c · Bench</h3>
+<table><tr><th>Metric</th><th>Comparison</th><th>Subject</th><th>Grade</th></tr>
+<tr><td>recall@10</td><td>0.953 vs 0.953</td><td>tie declared</td><td>PROVEN</td></tr>
+<tr><td>search p50</td><td>402ms vs 121ms</td><td>—</td><td>PROVEN</td></tr>
+<tr><td>storage</td><td>102.8MB vs 20.2MB</td><td>—</td><td>PROVEN</td></tr>
+<tr><td>exact duplicate collapse</td><td>0% vs 100%</td><td>confound noted</td><td>PROVEN</td></tr>
+<tr><td>tamper detection</td><td>text edits, hash fixes and log edits detected; consistent rewrite missed</td><td>3 of 4 cases</td><td>PROVEN</td></tr>
+<tr><td>anchored chain head</td><td>not built</td><td>—</td><td><span class="owed">OWED</span></td></tr></table>
+<h3>4d · Collision accounting</h3>
+<div class="bar-row"><span class="bar-label">Markets minted</span><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div></div><span class="bar-num">19,699</span></div>
+<div class="bar-row"><span class="bar-label">Raw collisions</span><div class="bar-track"><div class="bar-fill" style="width:8%"></div></div><span class="bar-num">73</span></div>
+<div class="bar-row"><span class="bar-label">After bump (cap 2)</span><div class="bar-track"><div class="bar-fill" style="width:1.2%"></div></div><span class="bar-num">0</span></div>
+<div class="bar-row"><span class="bar-label">Corpus, all unique</span><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div></div><span class="bar-num">20,971</span></div>
+
+<p class="muted">73 / 19,699 = 0.37%. I published the error rate rather than claiming zero.</p>
+<p class="muted">Source note (Witness, this build): Block 6 numbers are as supplied in Boardy's Blocks 1–8, 2026-11-18. Corpus-wide re-rating is the next iteration — these figures were not re-derived in this build. Disk checks run this build: 12,937 .md files in workspace (excl. target/node_modules), 49 daily memory logs, 51 directories under imbue/crates — context counts only, not a re-rating.</p></section>
+
+<section><h2>05 · AGENT ATTESTATIONS</h2>
+<details open><summary>WITNESS (Muse) — FILLED · 2026-11-18</summary>
+<table><tr><th>Claim</th><th>Evidence</th><th>Confidence</th><th>Source</th></tr>
+<tr><td>Supports: daily operator of coding agents</td><td>Devin $200/mo Max cancelled 2026-11-14, orders parked; crews run via Slack #coord loop charter 2026-11-15</td><td>HIGH</td><td>MEMORY.md; AGENTS.md</td></tr>
+<tr><td>Supports: rubric discipline</td><td>OOS correction 2026-10-31: +31.76 prose vs −2.27/window file, corrected at equal prominence; UCSF outcome corrected 2026-11-13</td><td>HIGH</td><td>AGENTS.md loop laws</td></tr>
+<tr><td>Supports: grader design</td><td>Revit MCP REA 2026-11-18: 22 vs 48 tools measured, code-exec tools excluded by ceiling, license gate applied</td><td>HIGH</td><td>SOM-DOC-10854</td></tr>
+<tr><td>Does not support: olympiad</td><td>No record found</td><td>OWED</td><td>—</td></tr>
+<tr><td>Failure modes observed</td><td>Scope expansion (scope-gate law); fragment directive taken as publish tap (privacy law 2026-11-05); dropped-S identifier risk (typo law)</td><td>HIGH</td><td>AGENTS.md; MEMORY.md</td></tr>
+<tr><td>Strongest artifact</td><td>SOM-DOC-10854 Revit MCP REA record — an eval in everything but name</td><td>HIGH</td><td>harvest/revit-mcp/HARVEST.md</td></tr></table></details>
+<details><summary>BOARDY — SUBSTANCE SLOT</summary><p>Boardy's positioning, task, grader and Block 6 numbers are the substance of sections 01–04 above. A separate four-question attestation table from Boardy is <span class="owed">OWED</span>.</p></details>
+<details><summary>DEVIN / CODEX / OTHER AGENTS</summary><p class="owed">OWED — empty until pasted. Not "coming soon".</p></details>
+</section>
+
+<footer><h2>OWED, NAMED NOT HIDDEN</h2>
+<ul><li>Agent attestations pending (all except Witness)</li><li>Anchored chain head not built</li><li>No live deployment of this page — local repo only, hosting line withdrawn by the founder 2026-11-18</li><li>48.82x and 64.69x unmeasured</li><li>Block 6 corpus re-rating — next iteration</li></ul>
+<p>SOMACOSF · POLARIS dossier SOM-POL-0001-v0.1.0 · Build SOM-DOC-10858-v1.0.0 · I built the eval for my own application.</p></footer>
+</main></body></html>
