@@ -34,6 +34,12 @@ flowchart LR
     D -->|next iteration| F[Rate all corpus, then re-issue]
 ```
 
+## Deployment receipt (2026-11-18)
+- Repo: https://github.com/SoMaCoSF/polaris (public)
+- Vercel: project `polaris` prj_HCpSNe3AyzQ34pYfGAjM1dGggXNX, team SoMaCo, rootDirectory `site`, git-linked to master
+- Production deployment: dpl_3W3wKoz9EaxJTVWkXbiA3DNMLhWu (commit f8a018e)
+- Verified from outside: https://polaris.somacosf.com/ 200, sha1 a94456edd3f9e2c836f554aa8e8f01f9e6178695 byte-identical to site/index.html; /assets/polaris-evidence.svg 200; /motion/polaris.mp4 and .gif 200
+
 ## Files
 - `site/index.html` — the landing page (interactive triple-ship member 1)
 - `assets/polaris-evidence.svg` — evidence infographic, 1200×1560 (member 2)
