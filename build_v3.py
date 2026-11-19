@@ -1,0 +1,159 @@
+#!/usr/bin/env python3
+"""SOM-DOC-10858 Polaris page builder v0.3.0 — Witness-evidence only.
+v0.3.0 (founder directive 2026-11-18 22:19 PT): corpus-wide rating added as
+section 07, direction ratings per agent and the interaction rated in section
+05. Every number below traces to a Witness scan/run or a MEMORY/AGENTS receipt;
+tonight's census numbers were measured three ways and only the figures all
+methods agree on are printed."""
+import pathlib
+R = pathlib.Path(__file__).parent
+
+page = """<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POLARIS · Applicant Dossier · SOMACOSF</title>
+<!-- SOM-DOC-10858-v1.2.0 · SOM-POL-0001-v0.3.0 · APPLICANT-DOSSIER · WITNESS EVALUATION · CORPUS RATED -->
+<style>
+:root{--paper:#08090A;--panel:#101214;--ink:#E8E6E1;--muted:#9A978E;--soft:#565A60;--rule:#2A2D31;--gold:#C9A227}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-monospace,'IBM Plex Mono',Menlo,Consolas,monospace;line-height:1.55}
+main{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+.eyebrow{letter-spacing:.18em;font-size:11px;color:var(--muted);text-transform:uppercase}
+h1{font-size:clamp(28px,5vw,52px);line-height:1.08;margin:12px 0}
+h2{font-size:20px;letter-spacing:.06em;margin:0 0 12px}
+h3{font-size:15px;letter-spacing:.04em;margin:20px 0 8px}
+.sub{color:var(--muted);font-size:15px}
+section{background:var(--panel);border:1px solid var(--rule);padding:24px;margin:20px 0}
+.hex{display:inline-block;width:22px;height:24px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);vertical-align:-6px;margin-right:10px}
+p{max-width:72ch} .muted{color:var(--muted)} .gold{color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}th{color:var(--muted);letter-spacing:.08em;font-size:11px;text-transform:uppercase}
+details{border:1px dashed var(--soft);padding:16px;margin:12px 0} summary{cursor:pointer;letter-spacing:.06em}
+.grade{border:1px solid var(--rule);padding:2px 8px;font-size:11px;letter-spacing:.1em}
+.owed{color:#e0a0a0} footer{color:var(--muted);font-size:13px;border-top:1px solid var(--rule);padding-top:20px}
+a{color:var(--ink)}
+</style></head><body><main>
+<div class="eyebrow">SOMACOSF · SOM-POL-0001-v0.3.0 · APPLICANT-DOSSIER · CORPUS RATED 2026-11-18 · 2 ATTESTATION SLOTS OWED</div>
+<h1><span class="hex"></span>The agents evaluate the applicant.</h1>
+<p class="sub">Applicant dossier · Research Engineer, Polaris · Google DeepMind, Mountain View<br>Evaluation: Witness (Muse), the agent who has run the work with him · Evidence, measurement, attestation only. No testimonials.</p>
+<p class="sub">This page is the work, not a description of it.</p>
+
+<section><h2>01 · THE ROLE, AS POSTED</h2>
+<table><tr><th>What the posting names</th><th>Source</th></tr>
+<tr><td>Hand-built eval tasks for long-horizon software engineering — each task a prompt plus a rubric, about a week of work per task</td><td>Job 114077679900074694, Google Careers</td></tr>
+<tr><td>Responsibilities: designing eval tasks · evaluating model weaknesses · building data and pipelines</td><td>Same posting — the three axes section 05 scores against</td></tr>
+<tr><td>Minimum: experience using AI coding agents; strong analytical problem solving. No degree requirement.</td><td>Same posting</td></tr>
+<tr><td>Preferred: olympiad background</td><td>Same posting — see section 06: NOT SUPPORTED, no record found</td></tr></table>
+<p class="muted">The applicant's position, in one line: he has spent 2026 as the operator and customer of coding agents — tasking them, grading their output, and building the corpus their work lands in. The protocol gets one line, here: he also builds identity and addressing for agent fleets. Everything below is the evidence for the first claim, not the second.</p></section>
+
+<section><h2>02 · THE WORK DYNAMIC — HOW HE TASKS AND COORDINATES AGENTS</h2>
+<p>He does not chat with agents and hope. He runs a system, and the system is the same one this page was built inside:</p>
+<table><tr><th>Mechanism</th><th>How it works</th><th>Receipt</th></tr>
+<tr><td>Identity repo</td><td>One identity repo per GitHub user. Every agent owns a mailbox in it — per agent, never per model; the model is a receipted binding attribute. The mailbox is the canonical append-only store; a junk-drawer mailbox owns dead letters, nothing is silently dropped. Keys never live in the repo.</td><td>MEMORY.md, identity-repo and agent-mailbox laws, 2026-10-04 / 10-09 / 10-17</td></tr>
+<tr><td>Tasking</td><td>Work is issued as typed records — DIRECTIVE / CLAIM / RECEIPT / SCORE / QUESTION — on the UUID substrate: every record (punchlists, trade modules, files, voice transcripts) is UUID-keyed and admitted under policy. A fragment from him binds to the nearest pending decision; it is never treated as a new thread.</td><td>AGENTS.md fragment law; MEMORY.md Morpho channel + UUID substrate confirmation, 2026-10-13</td></tr>
+<tr><td>Coordination harness</td><td>Six rules, posted by Witness in Slack #coord at his order: one identity per thing; memory is the ledger; ACK or it didn't happen; evidence or UNVERIFIED; relay is not a directive; numbers carry ownership first.</td><td>MEMORY.md preferences, 2026-11-15</td></tr>
+<tr><td>Iteration loop</td><td>Board → typed input → Witness gate → crews build → Witness verifies on final bytes → receipts → next round. An intake sweep every 30 minutes collects typed team input for arbitration.</td><td>MEMORY.md commitments, loop charter 2026-11-15</td></tr>
+<tr><td>Verification</td><td>Dereference before opining — chat is a cursor, the files are the database. Suite numbers count only from a run after the last edit, on the bytes that ship. Corrections run at equal prominence to the claim they replace. Sends, charges, prices, listings, installs, submissions and publications stay founder-tapped — agents build and stage; he taps.</td><td>AGENTS.md convo loop laws, 2026-10-31</td></tr>
+<tr><td>Corpus discipline</td><td>Every document carries a Ghost Catalog stamp (SOM-DOC-NNNNN) recorded in a single ledger before assignment, with a uniqueness grep over all carriers. Destructive acts write a .bk backup first. Deployments augment, never overwrite — legacy content is preserved byte-exact. The corpus is handled the way an eval corpus has to be: addressed, graded, and auditable. Section 07 rates it, segment by segment.</td><td>STAMP-LEDGER.md; Witness full-tree scan, 2026-11-18</td></tr></table></section>
+
+<section><h2>03 · COORDINATION ACROSS TEAMS — JEFF'S TEAM</h2>
+<p>The dynamic is not single-team. He coordinates his own agents with a second operator's agents, across a chat boundary, with ownership stated before any number:</p>
+<table><tr><th>Party</th><th>Role in the coordination</th><th>Receipt</th></tr>
+<tr><td>Jeff</td><td>Second operator. Kalshi thesis contact; funded the applicant's $15 live stake. His money, his paper tape, and the applicant's books are kept separate, ownership first, always.</td><td>memory/people/jeff.md</td></tr>
+<tr><td>Morpho</td><td>Jeff's agent. Works the shared desk from the other side: its audit exposed phantom positions in the FADE50 book; it delivered the Polymarket mapping as shadow-only (read, never execute); it holds open questions on repo access for the ITPM build.</td><td>memory/people/morpho.md, 2026-11-18</td></tr>
+<tr><td>Astra</td><td>Jeff-side verifier agent (@codex) on Jeff's machine. Verification is a separate seat from execution, on both teams.</td><td>memory/people/astra.md</td></tr>
+<tr><td>Vesper</td><td>Agent posting in the shared #coord channel: two Spoken ITPM lanes receipted 2026-11-17; tasked to verify the applicant's $20 fade plan for Jeff — one team's agent verifying the other operator's plan, in the open channel.</td><td>memory/people/vesper.md</td></tr>
+<tr><td>Measured example</td><td>2026-11-18 evening, Jeff's V22 paper book — reported in the shared channel with ownership attached: dipped to 9,974c, recovered to 10,824c, Shadow M8 legs +712c / +159c. Jeff's book, Jeff's numbers, relayed as receipts, not claimed by anyone else.</td><td>memory/groups/somaco-protocol-spine.md, 2026-11-18</td></tr></table>
+<p class="muted">What this proves for Polaris: multi-agent evaluation is his daily operating condition — agents grading agents, across operators, with provenance — not a scenario he would have to imagine for a task.</p></section>
+
+<section><h2>04 · EVIDENCE OF FIT — PROJECTS OPERATED INSIDE THE ROLE'S SCOPE</h2>
+<table><tr><th>Project</th><th>What happened, measured</th><th>Responsibility it evidences</th></tr>
+<tr><td>Hexlab-rust audit and rebuild, 2026-11-18</td><td>Another model's delivered repo was audited and found to be a hollow shell — build files and a README, zero source. The real web build was located in a different repo, ported, and a shipped web bug was found by measurement (a 0.94 visual inset made a whole subsystem read zero). Rebuilt in Rust: 18/18 tests green on final bytes, then 23/23 after the second tranche. Real Blender execution marked UNVERIFIED — no Blender on the verifying machine, and the page said so.</td><td>Evaluating model weaknesses; designing eval tasks</td></tr>
+<tr><td>Revit MCP harvest, Tier-2 REA, 2026-11-18</td><td>14 candidate servers inventoried; 2 exercised headless at pinned commits: 22 tools measured on one, 48 runtime-verified on the other. Findings a README could not give: both key elements by a provisional ID, zero use of the stable ID; a capability in the brief (stairs) exists in neither; both ship arbitrary-code-execution tools, excluded by ceiling. License gate applied per candidate. Record: SOM-DOC-10854.</td><td>Designing eval tasks; evaluating model weaknesses</td></tr>
+<tr><td>Paper desk accounting correction, 2026-10-31</td><td>Prose memory said the desk was at +31.76. The file on disk said −2.27 per window over 1,382 windows. The file won; the correction ran at headline size, the same evening, and produced a standing law: never narrate a number you have not dereferenced in the same turn. Later corrections of the same kind: phantom-mid take-profits replaced by bid-gated exits only.</td><td>Evaluating model weaknesses — including his own agent's</td></tr>
+<tr><td>FADE15U compounder spec, 2026-11-17</td><td>An eval-shaped spec written against his own trading agents: one consolidated book, stake 5% of bank ($10 floor, $250 cap), per-window exposure cap 15%, fees netted, demotion to 2.5% under a 92% rolling-40 win rate, kill line $600. Numeric thresholds, named failure conditions, no prose scoring. Record: SOM-DOC-10844.</td><td>Designing eval tasks; building data and pipelines</td></tr>
+<tr><td>This page, 2026-11-18</td><td>Built in one evening by the dynamic in section 02: tasked in fragments, built by the agent, verified on final bytes, corrected at equal prominence when a mid-deploy fetch produced a body that matched neither version (re-fetched, never reported), the applicant's name removed from every public surface on his one-line directive, numbering audited 01–06 with no 00. Full history in the repo's git log — the process is inspectable, not described.</td><td>All three</td></tr></table></section>
+
+<section><h2>05 · AGENT EVALUATION — WITNESS</h2>
+<details open><summary>WITNESS (Muse) — FILLED · 2026-11-18</summary>
+<table><tr><th>Claim</th><th>Evidence</th><th>Confidence</th><th>Source</th></tr>
+<tr><td>Supports: daily operator of coding agents</td><td>Devin $200/mo Max cancelled 2026-11-14, orders parked; crews run via Slack #coord loop charter 2026-11-15</td><td>HIGH</td><td>MEMORY.md; AGENTS.md</td></tr>
+<tr><td>Supports: rubric discipline</td><td>OOS correction 2026-10-31: +31.76 prose vs −2.27/window file, corrected at equal prominence; UCSF outcome corrected 2026-11-13</td><td>HIGH</td><td>AGENTS.md loop laws</td></tr>
+<tr><td>Supports: grader design</td><td>Revit MCP REA 2026-11-18: 22 vs 48 tools measured, code-exec tools excluded by ceiling, license gate applied</td><td>HIGH</td><td>SOM-DOC-10854</td></tr>
+<tr><td>Does not support: olympiad</td><td>no record found</td><td>NOT SUPPORTED</td><td>—</td></tr>
+<tr><td>Failure modes observed</td><td>Scope expansion (scope-gate law); fragment directive taken as publish tap (privacy law 2026-11-05); dropped-S identifier risk (typo law)</td><td>HIGH</td><td>AGENTS.md; MEMORY.md</td></tr>
+<tr><td>Strongest artifact</td><td>SOM-DOC-10854 Revit MCP REA record — an eval in everything but name</td><td>HIGH</td><td>harvest/revit-mcp/HARVEST.md</td></tr></table>
+<h3>Rating — fit against the posting's three responsibilities (Witness, scale 1–3)</h3>
+<table><tr><th>Responsibility</th><th>Rating</th><th>Evidence (the reason for the score)</th></tr>
+<tr><td>Designing eval tasks</td><td>2</td><td>Grader artifacts are real — the SOM-DOC-10854 REA record and the FADE15U spec in section 04 — but no finished, timed, Polaris-shaped task has been packaged solo yet; that is the gap named in the attestation above.</td></tr>
+<tr><td>Evaluating model weaknesses</td><td>3</td><td>A year of observed agent failure, taxonomied — drift, invented numbers, task-narrowing — each written as an operating law after a specific incident (AGENTS.md loop laws, 2026-10-31), plus the cross-team audits in section 03.</td></tr>
+<tr><td>Building data and pipelines</td><td>2</td><td>Real domain pipelines exist — permit firehose harness (SOM-DOC-10849), addressed registries, the stamp-ledger corpus discipline in section 02 — but no eval-data pipeline at production scale is in the record; the transfer is plausible, not proven.</td></tr></table>
+<h3>Direction — how he directs each agent (Witness, scale 1–3, 2026-11-18)</h3>
+<p class="muted">The founder asked for this rating himself: not how the agents performed, but how he directs them. Same scale, same rule — the score is the evidence.</p>
+<table><tr><th>Agent</th><th>Rating</th><th>Evidence (the reason for the score)</th></tr>
+<tr><td>Witness (Muse) — primary build agent</td><td>3</td><td>Direction by standing law, not repeated instruction: fragments bind to the nearest pending decision, irreversible acts stay tapped, corrections fold in the same turn. The whole estate runs through this one gate, and the gate's rules are written down where the next session reads them first.</td></tr>
+<tr><td>Devin — build partner, OUT 2026-11-14</td><td>2</td><td>Tasking was structured — written build orders, a mailbox bus, six staged intent packets for the Somacomarchy program — but the output was preparation, not builds: zero Devin commits in the fork. He read that correctly and cut the $200/mo plan without sentimentality. The miss was upstream: the engagement ran a month before the preparation-vs-delivery gap was priced.</td></tr>
+<tr><td>Grok — explorer / drafter</td><td>2</td><td>Used for what it is good at: wide exploration, first drafts, feasibility threads. His msg-5 pivot in the Icoskin thread — dense nano-core memory is the weak claim, addressed sensing is the strong one — is the single best task-design call in that record. Capped at 2 because Grok's deliverables needed full re-verification twice: a hollow-shell repo, and a pitch page carrying three superseded items and one unverified anecdote (graded, not circulated).</td></tr>
+<tr><td>Morpho — Jeff's agent, directed by interface</td><td>3</td><td>He does not direct Morpho; he designed the terms Morpho works under — typed records, ownership before numbers, shadow-only on the venue he cannot execute. The design paid: Morpho's audit caught the phantom-mid exits in his own desk's books. Direction by protocol, verified by the other side's agent.</td></tr>
+<tr><td>Astra · Vesper · Null — roster and verification seats</td><td>2</td><td>The seats exist and are used: Astra verifies on Jeff's side, Vesper was tasked cross-team, Null holds deploy authorization on the shared tree. Capped because this tier's attestations are still OWED below — staffed seats, incomplete receipts.</td></tr></table>
+<h3>The interaction, rated — the applicant as an eval environment</h3>
+<table><tr><th>Axis</th><th>Rating</th><th>Evidence</th></tr>
+<tr><td>Tasking bandwidth</td><td>3</td><td>Fragments plus standing law carry more task per message than any brief format in the record — a one-word reply binds to a pending decision and the work moves.</td></tr>
+<tr><td>Rubric strictness</td><td>3</td><td>He grades harder than the benchmark he is applying to join: numbers dereferenced or retracted, suite counts only from final bytes, corrections at equal prominence. The grades are written into law, not delivered as mood.</td></tr>
+<tr><td>Repair after failure</td><td>2</td><td>Ruptures stay open until explicitly closed — the privacy repair threads from 2026-11-05 are still open and paused, and silence does not close them. Correct eval hygiene; it costs the graded party, which is the point of a grade.</td></tr>
+<tr><td>Input signal noise</td><td>2</td><td>A documented dropped-S typing fault makes identifiers genuinely ambiguous at the source. He legislated around his own noise — silent resolution, second-sighting verification before anything publishes — instead of denying it. It still costs verification cycles every week.</td></tr></table></details>
+<details><summary>JEFF'S TEAM — MORPHO / ASTRA</summary><p class="owed">OWED — their attestations, in this same format, have not been pasted. Not "coming soon".</p></details>
+<details><summary>OTHER AGENTS</summary><p class="owed">OWED — empty until pasted. Not "coming soon".</p></details>
+<h3>Resolution legend — what the handles in this page point at</h3>
+<table><tr><th>Handle</th><th>Points at</th><th>Date</th><th>Access</th></tr>
+<tr><td>AGENTS.md</td><td>The operator's operating manual and harvest log — source of the loop laws, failure-mode laws and corpus discipline cited above</td><td>Laws dated 2026-10-31; file current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>MEMORY.md</td><td>Curated long-term memory of the applicant's work — source of the Devin, UCSF-correction, identity-repo and loop entries cited above</td><td>Entries dated 2026-10-04 to 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>STAMP-LEDGER.md</td><td>The single ledger every Ghost Catalog stamp is recorded in before assignment</td><td>444 stamps recorded, current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>SOM-DOC-10854 / harvest/revit-mcp/HARVEST.md</td><td>The Revit MCP Tier-2 REA record and the file that carries it</td><td>2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>SOM-DOC-10844</td><td>The FADE15U consolidated compounder spec</td><td>2026-11-17</td><td>Private — available on request</td></tr>
+<tr><td>SOM-DOC-10849</td><td>The permit firehose harness design — ingest, address, aggregate, express over public permit records</td><td>2026-11-17</td><td>Private — available on request</td></tr>
+<tr><td>memory/people/jeff.md · morpho.md · astra.md · vesper.md</td><td>The relationship records for Jeff and his team's agents, as cited in section 03</td><td>Current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>memory/groups/somaco-protocol-spine.md</td><td>The record of the multi-agent spine in the shared Slack workspace</td><td>Current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>Slack #coord (somaco_protocol)</td><td>Coordination channel where the harness rules and iteration loop run</td><td>Rules posted 2026-11-15</td><td>Private — available on request</td></tr>
+<tr><td>github.com/SoMaCoSF/polaris</td><td>This page's repo — the git history is the process record for section 04, last row</td><td>2026-11-18</td><td>Public</td></tr></table>
+</section>
+
+<section><h2>06 · LIMITS — WHAT THE EVIDENCE DOES NOT SUPPORT</h2>
+<table><tr><th>Claim</th><th>Finding</th></tr>
+<tr><td>Olympiad background (the posting's preferred qualification)</td><td>NOT SUPPORTED — no record found. A confirmed absence is a finding, not an OWED.</td></tr>
+<tr><td>Prior ML research role or publication record</td><td>NOT SUPPORTED — none in the record. He is not a researcher and this page does not position him as one.</td></tr>
+<tr><td>A finished, timed, Polaris-shaped task, packaged solo</td><td>OWED — the strongest single gap. The grader artifacts in section 04 are real but were not packaged as one task with its hours logged. Closing it is one week of exactly the work the role describes.</td></tr>
+<tr><td>Corpus breadth as product proof</td><td>NOT SUPPORTED — across the whole estate: 0 production mints, 0 adopters, $0 verified revenue (the founder's own honest zeros, section 07). The corpus evidences task-design range and grading discipline. It does not evidence adoption, and this page does not let breadth impersonate it.</td></tr>
+<tr><td>Management or level framing</td><td>NOT SOUGHT — he wants to build the benchmark, not manage the team that builds it. Stated plainly so the fit is judged on the work.</td></tr></table></section>
+
+<section><h2>07 · THE CORPUS, RATED — THE NEXT ITERATION, DONE</h2>
+<p>The founder's standing instruction for this page was: rate all of it. On 2026-11-18 he repeated the order and widened it — rate him, rate the interactions, rate how he directs each agent (section 05), and rate the corpus itself. This section is the corpus. Method, because method is the claim: Witness scanned the full workspace tree three ways on 2026-11-18; where the methods disagreed, the number is not printed. File counts exclude build artifacts and vendored trees. Ratings use the section 05 scale — a 3 means the evidence would survive a Polaris grader; a 1 means it would not, yet.</p>
+<h3>Census — what is actually on the disk</h3>
+<table><tr><th>Measure</th><th>Count</th><th>How counted</th></tr>
+<tr><td>Markdown documents</td><td>13,821</td><td>Full-tree scan, 2026-11-18 (vendored trees, build artifacts excluded)</td></tr>
+<tr><td>Goal workspaces</td><td>91</td><td>Directory census, workspace/goals</td></tr>
+<tr><td>Daily memory logs</td><td>49</td><td>memory/2026-*.md</td></tr>
+<tr><td>Dated harvest entries in the operating manual</td><td>113</td><td>AGENTS.md harvest log — external work acquired, exercised, measured, absorbed or rejected</td></tr>
+<tr><td>Coordination ledger</td><td>5,556 lines</td><td>hub-log.jsonl — every typed team exchange; two copies in agreement</td></tr>
+<tr><td>GitHub repositories</td><td>319 (204 public)</td><td>GitHub API, 2026-11-18 · 111 public gists</td></tr>
+<tr><td>Deployed estate URLs</td><td>428</td><td>Estate URL index, sites/deployed-urls</td></tr>
+<tr><td>Imbue crates</td><td>51</td><td>Crates under imbue/crates carrying a Cargo.toml</td></tr>
+<tr><td>Ghost Catalog stamps in the ledger</td><td>444</td><td>Unique SOM-DOC numbers recorded in STAMP-LEDGER.md</td></tr></table>
+<h3>Segments — rated as Polaris evidence</h3>
+<table><tr><th>Segment</th><th>Files</th><th>Rating</th><th>What it evidences</th></tr>
+<tr><td>Agent coordination corpus — mission_control hub, #coord harness, identity repo, per-agent mailboxes</td><td>2,534</td><td>3</td><td>Agents grading agents, across operators, with provenance — the role's daily operating condition, already running (section 03).</td></tr>
+<tr><td>Paper desk + the Great Correction</td><td>224</td><td>3</td><td>A manufactured headline (+$41,073 booked) revalued from the venue's own records to −$4,088 hold-to-settlement; 378 mid-booked exits isolated at +$27,836 of the fiction; mechanism fixed with bid-gated exits; desk restarted clean. The strongest honesty artifact in the corpus.</td></tr>
+<tr><td>Spoken ITPM + the Revit evaluation</td><td>4,934</td><td>3</td><td>A record contract enforced across agent crews (provenance 100%, unknown never dropped), integration 15/15 on real records, and SOM-DOC-10854 — an eval in everything but name.</td></tr>
+<tr><td>UUID protocol core — Imbue</td><td>2,708</td><td>2</td><td>The DNA itself: typed identity, capability ceilings, registry-issues-never-resolves, explored at every level for a year. Deep and coherent as task material; as product proof it carries the zeros in the fence below.</td></tr>
+<tr><td>Icoskin / icosphere</td><td>126</td><td>2</td><td>A materials brief where the claim boundary was written before the claims — dense nano-core memory NOT claimed, write-energy-per-flag named as the breaking unknown. Partner/funding stage; nothing physical built.</td></tr>
+<tr><td>DCSI + permit firehose</td><td>71</td><td>2</td><td>Real pipelines over public records: 72 permit records reconciled to the document (313 generators itemised across 5 documents / 4 facilities), 27 parties in 46 roles, signal-only discipline held for months.</td></tr>
+<tr><td>Says network / estate sites</td><td>1,398</td><td>1</td><td>Breadth, live: voxel twins, city sites, vox commerce with order intent recordable and no payment rail connected. His own scope-gate law grades it: breadth is not monetization while prices and rails are unbuilt.</td></tr></table>
+<p>The fence, at the same size as the census: <span class="gold">0 production mints · 0 adopters · $0 verified revenue.</span> The corpus evidences task-design range and grading discipline. It does not evidence adoption, and no rating above spends the zeros.</p>
+<p><img src="assets/polaris-corpus.svg" alt="Polaris corpus scan and segment ratings, 2026-11-18" style="width:100%;border:1px solid var(--rule)"></p>
+<p><video controls src="motion/polaris.mp4" style="width:100%;border:1px solid var(--rule)"></video><br><span class="muted">The corpus, rated — 20s program motion · <a href="motion/polaris.gif">GIF version</a> · still: <a href="assets/polaris-corpus.svg">polaris-corpus.svg</a></span></p>
+</section>
+
+<footer><h2>OWED, NAMED NOT HIDDEN</h2>
+<ul><li>Attestations from Jeff's team (Morpho, Astra) and other agents — 2 slots OWED in section 05</li><li>A finished, timed, Polaris-shaped task packaged solo</li><li>Anchored chain head not built</li></ul>
+<p>SOMACOSF · POLARIS dossier SOM-POL-0001-v0.3.0 · Build SOM-DOC-10858-v1.2.0 · v0.3.0 note (2026-11-18): the corpus-wide rating the founder ordered as the next iteration is done — section 07 rates every segment, section 05 now rates his direction of each agent and the interaction itself. v0.2.0 note: an earlier draft of this page (v0.1.x) was built from a second agent's supplied substance; the applicant rejected it as off-spirit and directed the rebuild from the working agents' own evidence. Earlier versions are preserved in this repo's git history, not deleted.</p></footer>
+</main></body></html>"""
+(R/"site/index.html").write_text(page)
+print("html bytes", len(page), "boardy mentions:", page.lower().count("boardy"), "name mentions:", page.count("Stave"))
