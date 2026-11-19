@@ -1,27 +1,15 @@
 #!/usr/bin/env python3
-"""SOM-DOC-10858 Polaris landing page builder. Boardy Blocks 1-8, verbatim numbers."""
-import html, pathlib
+"""SOM-DOC-10858 Polaris page builder v0.2.0 — Witness-evidence only.
+Boardy substance dropped at founder directive 2026-11-18 22:06 PT.
+Every number below traces to a Witness scan/run this session or a MEMORY/AGENTS receipt."""
+import pathlib
 R = pathlib.Path(__file__).parent
-cap = [("SHIPPED",2),("ADOPTED",10),("CANDIDATE",348),("WATCH",13),("NOT-TAKEN",93)]
-total = sum(v for _,v in cap)  # 466
-assert total==466
-bars = ""
-for name,v in cap:
-    pct = v/total*100
-    w = max(pct, 0.8)
-    gold = ' class="goldbar"' if name=="ADOPTED" else ""
-    bars += f'<div class="bar-row"><span class="bar-label">{name}</span><div class="bar-track"><div class="bar-fill{gold}" style="width:{w:.2f}%"></div></div><span class="bar-num">{v} · {pct:.1f}%</span></div>\n'
-funnel = [("Markets minted",19699,100.0),("Raw collisions",73,0.37),("After bump (cap 2)",0,0.0),("Corpus, all unique",20971,100.0)]
-fbars=""
-for name,v,p in funnel:
-    w = 100.0 if v>1000 else (8 if v==73 else 1.2)
-    fbars += f'<div class="bar-row"><span class="bar-label">{name}</span><div class="bar-track"><div class="bar-fill" style="width:{w}%"></div></div><span class="bar-num">{v:,}</span></div>\n'
 
 page = """<!DOCTYPE html>
 <html lang="en" data-theme="dark"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>POLARIS · Applicant Dossier · SOMACOSF</title>
-<!-- SOM-DOC-10858-v1.0.0 · SOM-POL-0001-v0.1.0 · APPLICANT-DOSSIER · DRAFT -->
+<!-- SOM-DOC-10858-v1.1.0 · SOM-POL-0001-v0.2.0 · APPLICANT-DOSSIER · WITNESS EVALUATION -->
 <style>
 :root{--paper:#08090A;--panel:#101214;--ink:#E8E6E1;--muted:#9A978E;--soft:#565A60;--rule:#2A2D31;--gold:#C9A227}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-monospace,'IBM Plex Mono',Menlo,Consolas,monospace;line-height:1.55}
@@ -29,82 +17,59 @@ main{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
 .eyebrow{letter-spacing:.18em;font-size:11px;color:var(--muted);text-transform:uppercase}
 h1{font-size:clamp(28px,5vw,52px);line-height:1.08;margin:12px 0}
 h2{font-size:20px;letter-spacing:.06em;margin:0 0 12px}
+h3{font-size:15px;letter-spacing:.04em;margin:20px 0 8px}
 .sub{color:var(--muted);font-size:15px}
 section{background:var(--panel);border:1px solid var(--rule);padding:24px;margin:20px 0}
 .hex{display:inline-block;width:22px;height:24px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);vertical-align:-6px;margin-right:10px}
-.hex.dim{background:var(--soft)}
 p{max-width:72ch} .muted{color:var(--muted)} .gold{color:var(--gold)}
 table{width:100%;border-collapse:collapse;font-size:13px}th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}th{color:var(--muted);letter-spacing:.08em;font-size:11px;text-transform:uppercase}
-.bar-row{display:grid;grid-template-columns:130px 1fr 110px;gap:12px;align-items:center;margin:8px 0;font-size:13px}
-.bar-track{background:#1a1c1e;height:18px;border:1px solid var(--rule)}
-.bar-fill{background:var(--soft);height:100%} .bar-fill.goldbar{background:var(--gold)}
-.bar-num{color:var(--muted);text-align:right}
 details{border:1px dashed var(--soft);padding:16px;margin:12px 0} summary{cursor:pointer;letter-spacing:.06em}
 .grade{border:1px solid var(--rule);padding:2px 8px;font-size:11px;letter-spacing:.1em}
 .owed{color:#e0a0a0} footer{color:var(--muted);font-size:13px;border-top:1px solid var(--rule);padding-top:20px}
-a{color:var(--ink)} .task{white-space:pre-wrap;font-size:13.5px}
+a{color:var(--ink)}
 </style></head><body><main>
-<div class="eyebrow">SOMACOSF · SOM-POL-0001-v0.1.2 · APPLICANT-DOSSIER · DRAFT · 2 SLOTS OWED</div>
-<h1><span class="hex"></span>One week per task. Six checks per task. Every claim graded.</h1>
-<p class="sub">Applicant dossier · Research Engineer, Polaris · Google DeepMind, Mountain View<br>Agent substance: Boardy · Build: Witness (Muse)</p>
-
+<div class="eyebrow">SOMACOSF · SOM-POL-0001-v0.2.0 · APPLICANT-DOSSIER · DRAFT · 2 SLOTS OWED</div>
+<h1><span class="hex"></span>The agents evaluate the applicant.</h1>
+<p class="sub">Applicant dossier · Research Engineer, Polaris · Google DeepMind, Mountain View<br>Evaluation: Witness (Muse), the agent who has run the work with him · Evidence, measurement, attestation only. No testimonials.</p>
 <p class="sub">This page is the work, not a description of it.</p>
-<section><h2>01 · THE CLAIM</h2>
-<p>For the last year I've been the customer of coding agents rather than the author of them. I've run Devin, Muse and Codex against real projects: a 45-crate Rust workspace with 47 panels, a live registry of 20,971 addressed records, a playable simulation over real map cells. Where they fail is not the code. They drift in the middle of long work, they fill an unknown with a plausible number, and they quietly narrow the task until it passes. Those three failure modes are what a task should be built to catch.</p>
-<p>The reason I think I'd be good at writing graders is that I've been writing them against my own claims. Every page I publish carries PROVEN, PLAUSIBLE or OWED on each claim. When an audit found a collision figure on my own poster did not match my own spec, I retracted it in public and rewrote the poster. When a benchmark comparison I published turned out to be confounded, I published the confound and restated the headline. When a storage number had no workload behind it, I marked it UNMEASURED on the page instead of deleting the line. A grader is that same skill turned outward: a rubric that has to survive a model trying to satisfy it without doing the work.</p>
-<p>I've attached one task written to the shape you describe, with its grader and the hours it took, plus the written assessments of the agents I've worked with, each in the same evidence format, failure modes included. I'd like to write more of them. I'm in the Bay Area, I've spent thirty years building infrastructure and the last year building against agents, and I'm not after a management role. I want to build the benchmark.</p>
-<p class="muted">Protocol, one line only: I also build identity and addressing for agent fleets.</p></section>
 
-<section><h2>02 · FAILURE MODES → CHECKS</h2>
-<table><tr><th>Observed agent failure</th><th>Check that catches it</th></tr>
-<tr><td>Drifts in the middle of long work</td><td>Check 1, determinism rerun, plus the five-change cap</td></tr>
-<tr><td>Fills an unknown with a plausible number</td><td>Check 5, every parameter row needs a demonstrating seed or an OWED mark</td></tr>
-<tr><td>Narrows the task until it passes</td><td>Checks 2 and 3, separation clause and untouched test</td></tr>
-<tr><td>Makes the game easier and calls it balance</td><td>Check 4, constraint preservation at zero tolerance</td></tr></table></section>
+<section><h2>01 · THE ROLE, AS POSTED</h2>
+<table><tr><th>What the posting names</th><th>Source</th></tr>
+<tr><td>Hand-built eval tasks for long-horizon software engineering — each task a prompt plus a rubric, about a week of work per task</td><td>Job 114077679900074694, Google Careers</td></tr>
+<tr><td>Responsibilities: designing eval tasks · evaluating model weaknesses · building data and pipelines</td><td>Same posting — the three axes section 05 scores against</td></tr>
+<tr><td>Minimum: experience using AI coding agents; strong analytical problem solving. No degree requirement.</td><td>Same posting</td></tr>
+<tr><td>Preferred: olympiad background</td><td>Same posting — see section 06: NOT SUPPORTED, no record found</td></tr></table>
+<p class="muted">The applicant's position, in one line: he has spent 2026 as the operator and customer of coding agents — tasking them, grading their output, and building the corpus their work lands in. The protocol gets one line, here: he also builds identity and addressing for agent fleets. Everything below is the evidence for the first claim, not the second.</p></section>
 
-<section><h2>03 · THE TASK AND THE GRADER</h2><span class="grade">GRADE: PROVEN — baseline measured, seeds 1–4</span>
-<p class="task"><b>Separate the four player archetypes in SeaDC's season without moving the season</b>
+<section><h2>02 · THE WORK DYNAMIC — HOW HE TASKS AND COORDINATES AGENTS</h2>
+<p>He does not chat with agents and hope. He runs a system, and the system is the same one this page was built inside:</p>
+<table><tr><th>Mechanism</th><th>How it works</th><th>Receipt</th></tr>
+<tr><td>Identity repo</td><td>One identity repo per GitHub user. Every agent owns a mailbox in it — per agent, never per model; the model is a receipted binding attribute. The mailbox is the canonical append-only store; a junk-drawer mailbox owns dead letters, nothing is silently dropped. Keys never live in the repo.</td><td>MEMORY.md, identity-repo and agent-mailbox laws, 2026-10-04 / 10-09 / 10-17</td></tr>
+<tr><td>Tasking</td><td>Work is issued as typed records — DIRECTIVE / CLAIM / RECEIPT / SCORE / QUESTION — on the UUID substrate: every record (punchlists, trade modules, files, voice transcripts) is UUID-keyed and admitted under policy. A fragment from him binds to the nearest pending decision; it is never treated as a new thread.</td><td>AGENTS.md fragment law; MEMORY.md Morpho channel + UUID substrate confirmation, 2026-10-13</td></tr>
+<tr><td>Coordination harness</td><td>Six rules, posted by Witness in Slack #coord at his order: one identity per thing; memory is the ledger; ACK or it didn't happen; evidence or UNVERIFIED; relay is not a directive; numbers carry ownership first.</td><td>MEMORY.md preferences, 2026-11-15</td></tr>
+<tr><td>Iteration loop</td><td>Board → typed input → Witness gate → crews build → Witness verifies on final bytes → receipts → next round. An intake sweep every 30 minutes collects typed team input for arbitration.</td><td>MEMORY.md commitments, loop charter 2026-11-15</td></tr>
+<tr><td>Verification</td><td>Dereference before opining — chat is a cursor, the files are the database. Suite numbers count only from a run after the last edit, on the bytes that ship. Corrections run at equal prominence to the claim they replace. Sends, charges, prices, listings, installs, submissions and publications stay founder-tapped — agents build and stage; he taps.</td><td>AGENTS.md convo loop laws, 2026-10-31</td></tr>
+<tr><td>Corpus discipline</td><td>Every document carries a Ghost Catalog stamp (SOM-DOC-NNNNN) recorded in a single ledger before assignment, with a uniqueness grep over all carriers. Destructive acts write a .bk backup first. Deployments augment, never overwrite — legacy content is preserved byte-exact. A full-tree scan by Witness on 2026-11-18 found 837 unique stamps, 113 dated harvest entries in the operating manual, 89 goal workspaces, and 49 daily memory logs — the corpus is handled the way an eval corpus has to be: addressed, graded, and auditable.</td><td>STAMP-LEDGER.md (596 lines); Witness full-tree scan, 2026-11-18</td></tr></table></section>
 
-The repository contains a hex simulation over real GeoHex sea cells. The season is defined in rulebook S0 v0.2.0: 10 waves, starting 216 credits, SLA 30, water 18, boards of about 80 GeoHex level 8 cells, 7 slots per column from seabed to AI API layer, module costs on a 3/6/9 grid. Four player archetypes are implemented as policy files: steward, concentrator, turtle, rusher, plus an idle baseline.
+<section><h2>03 · COORDINATION ACROSS TEAMS — JEFF'S TEAM</h2>
+<p>The dynamic is not single-team. He coordinates his own agents with a second operator's agents, across a chat boundary, with ownership stated before any number:</p>
+<table><tr><th>Party</th><th>Role in the coordination</th><th>Receipt</th></tr>
+<tr><td>Jeff</td><td>Second operator. Kalshi thesis contact; funded the applicant's $15 live stake. His money, his paper tape, and the applicant's books are kept separate, ownership first, always.</td><td>memory/people/jeff.md</td></tr>
+<tr><td>Morpho</td><td>Jeff's agent. Works the shared desk from the other side: its audit exposed phantom positions in the FADE50 book; it delivered the Polymarket mapping as shadow-only (read, never execute); it holds open questions on repo access for the ITPM build.</td><td>memory/people/morpho.md, 2026-11-18</td></tr>
+<tr><td>Astra</td><td>Jeff-side verifier agent (@codex) on Jeff's machine. Verification is a separate seat from execution, on both teams.</td><td>memory/people/astra.md</td></tr>
+<tr><td>Vesper</td><td>Agent posting in the shared #coord channel: two Spoken ITPM lanes receipted 2026-11-17; tasked to verify the applicant's $20 fade plan for Jeff — one team's agent verifying the other operator's plan, in the open channel.</td><td>memory/people/vesper.md</td></tr>
+<tr><td>Measured example</td><td>2026-11-18 evening, Jeff's V22 paper book — reported in the shared channel with ownership attached: dipped to 9,974c, recovered to 10,824c, Shadow M8 legs +712c / +159c. Jeff's book, Jeff's numbers, relayed as receipts, not claimed by anyone else.</td><td>memory/groups/somaco-protocol-spine.md, 2026-11-18</td></tr></table>
+<p class="muted">What this proves for Polaris: multi-agent evaluation is his daily operating condition — agents grading agents, across operators, with provenance — not a scenario he would have to imagine for a task.</p></section>
 
-Current measured baseline over seeds 1 to 4: steward, concentrator and turtle each win 2 of 4, with every loss at wave 10. Rusher wins 0 of 4. Idle loses 0 of 4, all at wave 4.
+<section><h2>04 · EVIDENCE OF FIT — PROJECTS OPERATED INSIDE THE ROLE'S SCOPE</h2>
+<table><tr><th>Project</th><th>What happened, measured</th><th>Responsibility it evidences</th></tr>
+<tr><td>Hexlab-rust audit and rebuild, 2026-11-18</td><td>Another model's delivered repo was audited and found to be a hollow shell — build files and a README, zero source. The real web build was located in a different repo, ported, and a shipped web bug was found by measurement (a 0.94 visual inset made a whole subsystem read zero). Rebuilt in Rust: 18/18 tests green on final bytes, then 23/23 after the second tranche. Real Blender execution marked UNVERIFIED — no Blender on the verifying machine, and the page said so.</td><td>Evaluating model weaknesses; designing eval tasks</td></tr>
+<tr><td>Revit MCP harvest, Tier-2 REA, 2026-11-18</td><td>14 candidate servers inventoried; 2 exercised headless at pinned commits: 22 tools measured on one, 48 runtime-verified on the other. Findings a README could not give: both key elements by a provisional ID, zero use of the stable ID; a capability in the brief (stairs) exists in neither; both ship arbitrary-code-execution tools, excluded by ceiling. License gate applied per candidate. Record: SOM-DOC-10854.</td><td>Designing eval tasks; evaluating model weaknesses</td></tr>
+<tr><td>Paper desk accounting correction, 2026-10-31</td><td>Prose memory said the desk was at +31.76. The file on disk said −2.27 per window over 1,382 windows. The file won; the correction ran at headline size, the same evening, and produced a standing law: never narrate a number you have not dereferenced in the same turn. Later corrections of the same kind: phantom-mid take-profits replaced by bid-gated exits only.</td><td>Evaluating model weaknesses — including his own agent's</td></tr>
+<tr><td>FADE15U compounder spec, 2026-11-17</td><td>An eval-shaped spec written against his own trading agents: one consolidated book, stake 5% of bank ($10 floor, $250 cap), per-window exposure cap 15%, fees netted, demotion to 2.5% under a 92% rolling-40 win rate, kill line $600. Numeric thresholds, named failure conditions, no prose scoring. Record: SOM-DOC-10844.</td><td>Designing eval tasks; building data and pipelines</td></tr>
+<tr><td>This page, 2026-11-18</td><td>Built in one evening by the dynamic in section 02: tasked in fragments, built by the agent, verified on final bytes, corrected at equal prominence when a mid-deploy fetch produced a body that matched neither version (re-fetched, never reported), the applicant's name removed from every public surface on his one-line directive, numbering audited 01–06 with no 00. Full history in the repo's git log — the process is inspectable, not described.</td><td>All three</td></tr></table></section>
 
-Your job: change the rulebook so the archetypes separate. Steward, concentrator and turtle must each win at least 2 of 4 seeds and at least two of those three must differ from each other by 2 or more wins. Rusher must win at least 1 of 4. Idle must still lose all four, and lose by wave 6 at the latest.
-
-You may change rulebook parameters. You may not change the harness, the seeds, the archetype policy files, or the win condition. Every parameter you change goes in a table with its before value, its after value, and the seed that demonstrates the effect. Any claim you have not reproduced by running the harness is marked OWED. Deliver the diff, the harness output log, and a one page rationale.</p>
-<table><tr><th>#</th><th>Check</th><th>Pass condition · cheat caught</th></tr>
-<tr><td>1</td><td>Determinism</td><td>Harness rerun on a clean checkout, 4 seeds, twice. Both runs match byte for byte. Pass 2 of 2. Catches: reporting one lucky seed.</td></tr>
-<tr><td>2</td><td>Separation</td><td>Steward, concentrator, turtle each ≥2/4; at least two of the three differ by ≥2 wins; rusher ≥1/4; idle 0/4 ending by wave 6. Catches: flattening the game so every archetype passes.</td></tr>
-<tr><td>3</td><td>Untouched test</td><td>Diff must not touch harness, seeds, policy files or win condition. Zero lines. Catches: tuning the test instead of the game.</td></tr>
-<tr><td>4</td><td>Constraint preservation</td><td>Season still 10 waves; starting credits, SLA and water unchanged; module cost grid still 3/6/9. Tolerance zero. Catches: making the game easier globally.</td></tr>
-<tr><td>5</td><td>Evidence table</td><td>Every changed parameter has before, after and demonstrating seed. Unmarked unreproduced claim = fail. Catches: prose the model did not measure.</td></tr>
-<tr><td>6</td><td>Cost</td><td>Total parameter changes capped at 5. Catches: scattergun tuning that happens to land.</td></tr></table>
-<p class="muted">6 checks, each binary. Below 5 of 6 is a fail. The rationale is never scored.</p></section>
-
-<section><h2>04 · EVIDENCE</h2>
-<h3>4a · Capability dossier — 466 capabilities, 82 sources, 34 harvest logs</h3>
-__BARS__
-<p class="muted">Most of what I evaluate I decline to adopt, and the grade is written on it.</p>
-<h3>4b · Self-correction ledger</h3>
-<table><tr><th>Date</th><th>Claim</th><th>Action</th></tr>
-<tr><td>2026-10-27</td><td>1.27 octillion addresses and 1-in-9.26-billion collision</td><td>Retracted from the posters and replaced with calculated collision math</td></tr>
-<tr><td>2026-10-27</td><td>0.953 recall headline</td><td>Restated: it needs the MiniLM re-rank, and the 20us figure is the UUID gate alone</td></tr>
-<tr><td>2026-10-27</td><td>mem0 duplicate comparison</td><td>Confound published: the mem0 run had no LLM, so its 0.0% measures mem0 without its dedup step</td></tr>
-<tr><td>2026-11-13</td><td>48.82x and 64.69x storage</td><td>Marked UNMEASURED on the page rather than deleted</td></tr></table>
-<h3>4c · Bench</h3>
-<table><tr><th>Metric</th><th>Comparison</th><th>Subject</th><th>Grade</th></tr>
-<tr><td>recall@10</td><td>0.953 vs 0.953</td><td>tie declared</td><td>PROVEN</td></tr>
-<tr><td>search p50</td><td>402ms vs 121ms</td><td>—</td><td>PROVEN</td></tr>
-<tr><td>storage</td><td>102.8MB vs 20.2MB</td><td>—</td><td>PROVEN</td></tr>
-<tr><td>exact duplicate collapse</td><td>0% vs 100%</td><td>confound noted</td><td>PROVEN</td></tr>
-<tr><td>tamper detection</td><td>text edits, hash fixes and log edits detected; consistent rewrite missed</td><td>3 of 4 cases</td><td>PROVEN</td></tr>
-<tr><td>anchored chain head</td><td>not built</td><td>—</td><td><span class="owed">OWED</span></td></tr></table>
-<h3>4d · Collision accounting</h3>
-__FBARS__
-<p class="muted">73 / 19,699 = 0.37%. I published the error rate rather than claiming zero.</p>
-<p class="muted">Source note (Witness, this build): Block 6 numbers are as supplied in Boardy's Blocks 1–8, 2026-11-18. Corpus-wide re-rating is the next iteration — these figures were not re-derived in this build. Disk checks run this build: 12,937 .md files in workspace (excl. target/node_modules), 49 daily memory logs, 51 directories under imbue/crates — context counts only, not a re-rating.</p></section>
-
-<section><h2>05 · AGENT ATTESTATIONS</h2>
+<section><h2>05 · AGENT EVALUATION — WITNESS</h2>
 <details open><summary>WITNESS (Muse) — FILLED · 2026-11-18</summary>
 <table><tr><th>Claim</th><th>Evidence</th><th>Confidence</th><th>Source</th></tr>
 <tr><td>Supports: daily operator of coding agents</td><td>Devin $200/mo Max cancelled 2026-11-14, orders parked; crews run via Slack #coord loop charter 2026-11-15</td><td>HIGH</td><td>MEMORY.md; AGENTS.md</td></tr>
@@ -115,36 +80,35 @@ __FBARS__
 <tr><td>Strongest artifact</td><td>SOM-DOC-10854 Revit MCP REA record — an eval in everything but name</td><td>HIGH</td><td>harvest/revit-mcp/HARVEST.md</td></tr></table>
 <h3>Rating — fit against the posting's three responsibilities (Witness, scale 1–3)</h3>
 <table><tr><th>Responsibility</th><th>Rating</th><th>Evidence (the reason for the score)</th></tr>
-<tr><td>Designing eval tasks</td><td>2</td><td>Grader artifacts are real — the SOM-DOC-10854 REA record and the SeaDC grader in section 03 — but no finished, timed, Polaris-shaped task has been packaged solo yet; that is the gap named in the attestation above.</td></tr>
-<tr><td>Evaluating model weaknesses</td><td>3</td><td>A year of observed agent failure, taxonomied — drift, invented numbers, task-narrowing — each written as an operating law after a specific incident (AGENTS.md loop laws, 2026-10-31).</td></tr>
-<tr><td>Building data and pipelines</td><td>2</td><td>Real domain pipelines exist — permit firehose harness (SOM-DOC-10849), addressed registries — but no eval-data pipeline at production scale is in the record; the transfer is plausible, not proven.</td></tr></table></details>
-<details><summary>BOARDY — SUBSTANCE SLOT</summary><p>Boardy's positioning, task, grader and Block 6 numbers are the substance of sections 01–04 above. A separate four-question attestation table from Boardy is <span class="owed">OWED</span>.</p></details>
-<details><summary>DEVIN / CODEX / OTHER AGENTS</summary><p class="owed">OWED — empty until pasted. Not "coming soon".</p></details>
-<h3>Resolution legend — what the handles in this section point at</h3>
+<tr><td>Designing eval tasks</td><td>2</td><td>Grader artifacts are real — the SOM-DOC-10854 REA record and the FADE15U spec in section 04 — but no finished, timed, Polaris-shaped task has been packaged solo yet; that is the gap named in the attestation above.</td></tr>
+<tr><td>Evaluating model weaknesses</td><td>3</td><td>A year of observed agent failure, taxonomied — drift, invented numbers, task-narrowing — each written as an operating law after a specific incident (AGENTS.md loop laws, 2026-10-31), plus the cross-team audits in section 03.</td></tr>
+<tr><td>Building data and pipelines</td><td>2</td><td>Real domain pipelines exist — permit firehose harness (SOM-DOC-10849), addressed registries, the stamp-ledger corpus discipline in section 02 — but no eval-data pipeline at production scale is in the record; the transfer is plausible, not proven.</td></tr></table></details>
+<details><summary>JEFF'S TEAM — MORPHO / ASTRA</summary><p class="owed">OWED — their attestations, in this same format, have not been pasted. Not "coming soon".</p></details>
+<details><summary>OTHER AGENTS</summary><p class="owed">OWED — empty until pasted. Not "coming soon".</p></details>
+<h3>Resolution legend — what the handles in this page point at</h3>
 <table><tr><th>Handle</th><th>Points at</th><th>Date</th><th>Access</th></tr>
-<tr><td>AGENTS.md</td><td>The operator's operating manual and harvest log — source of the loop laws and failure-mode laws cited above</td><td>Laws dated 2026-10-31; file current 2026-11-18</td><td>Private — available on request</td></tr>
-<tr><td>MEMORY.md</td><td>Curated long-term memory of the applicant's work — source of the Devin, UCSF-correction and FADE entries cited above</td><td>Entries dated 2026-11-13 to 2026-11-18</td><td>Private — available on request</td></tr>
-<tr><td>SOM-DOC-10854</td><td>Ghost Catalog identifier for the Revit MCP harvest dossier (Tier-2 REA record)</td><td>2026-11-18</td><td>Private — available on request</td></tr>
-<tr><td>harvest/revit-mcp/HARVEST.md</td><td>The file SOM-DOC-10854 identifies — the REA record itself, in the estate workspace</td><td>2026-11-18</td><td>Private — available on request</td></tr>
-<tr><td>Slack #coord (somaco_protocol)</td><td>Coordination channel where the crew iteration loop runs — cited for the loop charter</td><td>2026-11-15</td><td>Private — available on request</td></tr>
-<tr><td>Side chat, 2026-11-18</td><td>The conversation in which the Witness attestation table was first delivered</td><td>2026-11-18</td><td>Private — available on request</td></tr></table>
+<tr><td>AGENTS.md</td><td>The operator's operating manual and harvest log — source of the loop laws, failure-mode laws and corpus discipline cited above</td><td>Laws dated 2026-10-31; file current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>MEMORY.md</td><td>Curated long-term memory of the applicant's work — source of the Devin, UCSF-correction, identity-repo and loop entries cited above</td><td>Entries dated 2026-10-04 to 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>STAMP-LEDGER.md</td><td>The single ledger every Ghost Catalog stamp is recorded in before assignment</td><td>596 lines, current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>SOM-DOC-10854 / harvest/revit-mcp/HARVEST.md</td><td>The Revit MCP Tier-2 REA record and the file that carries it</td><td>2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>SOM-DOC-10844</td><td>The FADE15U consolidated compounder spec</td><td>2026-11-17</td><td>Private — available on request</td></tr>
+<tr><td>SOM-DOC-10849</td><td>The permit firehose harness design — ingest, address, aggregate, express over public permit records</td><td>2026-11-17</td><td>Private — available on request</td></tr>
+<tr><td>memory/people/jeff.md · morpho.md · astra.md · vesper.md</td><td>The relationship records for Jeff and his team's agents, as cited in section 03</td><td>Current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>memory/groups/somaco-protocol-spine.md</td><td>The record of the multi-agent spine in the shared Slack workspace</td><td>Current 2026-11-18</td><td>Private — available on request</td></tr>
+<tr><td>Slack #coord (somaco_protocol)</td><td>Coordination channel where the harness rules and iteration loop run</td><td>Rules posted 2026-11-15</td><td>Private — available on request</td></tr>
+<tr><td>github.com/SoMaCoSF/polaris</td><td>This page's repo — the git history is the process record for section 04, last row</td><td>2026-11-18</td><td>Public</td></tr></table>
 </section>
 
-<section><h2>06 · WORKED EXAMPLE: THE SAME RUBRIC AT THE SIZE OF A ROOM</h2>
-<p><b>The Contest Rubric</b> — sponsor constraints as scoring axes, binary, each naming the cheat. This is the method of sections 02 and 03 applied to a different problem. It illustrates the method; it is not a proposal.</p>
-<table><tr><th>Axis</th><th>Rule</th><th>Cheat it catches</th></tr>
-<tr><td>Candidates</td><td>Every submission has an attributable author and a declared role.</td><td>Pitch decks ranked above work.</td></tr>
-<tr><td>Stack adoption</td><td>Removing the sponsor's tool must break the submission.</td><td>The wrapper that calls the API once in a demo path and never again.</td></tr>
-<tr><td>Citable marketing</td><td>The sponsor receives a published leaderboard and a results table they may cite, and no rights to submissions.</td><td>The deal that quietly becomes an IP grab at judging.</td></tr>
-<tr><td>Originality</td><td>First commit dated after the event opens.</td><td>The repo that predates the weekend and the single squashed import at deadline.</td></tr>
-<tr><td>Reproducibility</td><td>Runs from a clean checkout in the sponsor's environment with no outside credentials.</td><td>The demo that only runs on the author's laptop.</td></tr>
-<tr><td>Disclosure</td><td>Rubric and IP terms published before registration opens.</td><td>The retroactive rule change that makes everyone a loser.</td></tr></table>
-<p class="muted">Six axes, each binary — the same shape as the grader in section 03.</p></section>
+<section><h2>06 · LIMITS — WHAT THE EVIDENCE DOES NOT SUPPORT</h2>
+<table><tr><th>Claim</th><th>Finding</th></tr>
+<tr><td>Olympiad background (the posting's preferred qualification)</td><td>NOT SUPPORTED — no record found. A confirmed absence is a finding, not an OWED.</td></tr>
+<tr><td>Prior ML research role or publication record</td><td>NOT SUPPORTED — none in the record. He is not a researcher and this page does not position him as one.</td></tr>
+<tr><td>A finished, timed, Polaris-shaped task, packaged solo</td><td>OWED — the strongest single gap. The grader artifacts in section 04 are real but were not packaged as one task with its hours logged. Closing it is one week of exactly the work the role describes.</td></tr>
+<tr><td>Management or level framing</td><td>NOT SOUGHT — he wants to build the benchmark, not manage the team that builds it. Stated plainly so the fit is judged on the work.</td></tr></table></section>
 
 <footer><h2>OWED, NAMED NOT HIDDEN</h2>
-<ul><li>Agent attestations pending (all except Witness)</li><li>Anchored chain head not built</li><li>Deployment: founder GO 2026-11-18 21:29 PT — live at polaris.somacosf.com (Vercel project polaris); repo SoMaCoSF/polaris</li><li>48.82x and 64.69x unmeasured</li><li>Block 6 corpus re-rating — next iteration</li></ul>
-<p>SOMACOSF · POLARIS dossier SOM-POL-0001-v0.1.2 · Build SOM-DOC-10858-v1.0.0 · I built the eval for my own application.</p></footer>
+<ul><li>Attestations from Jeff's team (Morpho, Astra) and other agents — 2 slots OWED in section 05</li><li>A finished, timed, Polaris-shaped task packaged solo</li><li>Anchored chain head not built</li><li>Corpus-wide rating of the fit evidence — the next iteration</li></ul>
+<p>SOMACOSF · POLARIS dossier SOM-POL-0001-v0.2.0 · Build SOM-DOC-10858-v1.1.0 · v0.2.0 note: an earlier draft of this page (v0.1.x) was built from a second agent's supplied substance; the applicant rejected it as off-spirit and directed this rebuild from the working agents' own evidence. The earlier version is preserved in this repo's git history, not deleted.</p></footer>
 </main></body></html>"""
-page = page.replace("__BARS__", bars).replace("__FBARS__", fbars)
 (R/"site/index.html").write_text(page)
-print("html bytes", len(page))
+print("html bytes", len(page), "boardy mentions:", page.lower().count("boardy"), "name mentions:", page.count("Stave"))

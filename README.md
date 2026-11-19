@@ -19,7 +19,7 @@ agent attestations in the same evidence format — failure modes included.
 04 Evidence (4 charts) → 05 Agent attestations → OWED list.
 
 **State, honestly:**
-- Substance: Boardy Blocks 1–8, 2026-11-18 (this repo drops them into corpus DNA; markup is ours and will be replaced by the estate build system).
+- Substance: Witness evaluation v0.2.0, 2026-11-18. An earlier draft used a second agent's supplied substance (Blocks 1-8); the founder rejected it as off-spirit at 22:06 PT and directed this rebuild from the working agents' own evidence. The earlier version is preserved in git history.
 - Witness attestation: FILLED, from the 2026-11-18 side chat in this dossier's record.
 - Other agent attestations: OWED — empty slots on the page say OWED, not "coming soon".
 - Numbers in Block 6: as supplied in Blocks 1–8. Corpus-wide re-rating is the NEXT iteration (founder, 2026-11-18) — no number here was re-derived in this build, and the page says so in its footer.

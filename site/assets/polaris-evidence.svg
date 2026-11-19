@@ -1,41 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1560" width="1200" height="1560">
 <rect width="1200" height="1560" fill="#08090A"/>
-<text x="48" y="72" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="4">SOMACOSF &#183; SOM-POL-0001-v0.1.0 &#183; EVIDENCE</text>
-<text x="48" y="128" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="40" font-weight="bold">466 capabilities. Every one graded.</text>
-<text x="48" y="168" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">82 sources &#183; 34 harvest logs &#183; numbers as supplied in Blocks 1-8, 2026-11-18</text>
-<text x="48" y="264" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">SHIPPED</text>
-<rect x="248" y="240" width="8" height="28" fill="#565A60"/>
-<text x="272" y="264" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">2 &#183; 0.4%</text>
-<text x="48" y="328" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">ADOPTED</text>
-<rect x="248" y="304" width="19" height="28" fill="#C9A227"/>
-<text x="283" y="328" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">10 &#183; 2.1%</text>
-<text x="48" y="392" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">CANDIDATE</text>
-<rect x="248" y="368" width="672" height="28" fill="#565A60"/>
-<text x="936" y="392" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">348 &#183; 74.7%</text>
-<text x="48" y="456" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">WATCH</text>
-<rect x="248" y="432" width="25" height="28" fill="#565A60"/>
-<text x="289" y="456" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">13 &#183; 2.8%</text>
-<text x="48" y="520" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">NOT-TAKEN</text>
-<rect x="248" y="496" width="180" height="28" fill="#565A60"/>
-<text x="444" y="520" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">93 &#183; 20.0%</text>
-<rect x="48" y="576" width="1104" height="4" fill="#C9A227"/>
-<text x="48" y="640" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="28" font-weight="bold">Collision accounting — published, not hidden</text>
-<text x="48" y="712" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Markets minted</text>
-<text x="900" y="712" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">19,699</text>
-<text x="48" y="760" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Raw collisions (0.37%)</text>
-<text x="900" y="760" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">73</text>
-<text x="48" y="808" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">After bump, cap 2</text>
-<text x="900" y="808" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">0</text>
-<text x="48" y="856" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Corpus, all unique</text>
-<text x="900" y="856" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">20,971</text>
-<text x="48" y="912" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="28" font-weight="bold">Self-corrections, on the record</text>
-<text x="48" y="984" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">2026-10-27</text>
-<text x="220" y="984" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">Octillion collision figure — retracted, replaced with calculated math</text>
-<text x="48" y="1028" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">2026-10-27</text>
-<text x="220" y="1028" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">0.953 recall — restated with its MiniLM re-rank condition</text>
-<text x="48" y="1072" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">2026-10-27</text>
-<text x="220" y="1072" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">mem0 comparison — confound published</text>
-<text x="48" y="1116" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">2026-11-13</text>
-<text x="220" y="1116" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">48.82x / 64.69x storage — marked UNMEASURED, not deleted</text>
-<text x="48" y="1176" fill="#e0a0a0" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">OWED: anchored chain head not built &#183; other agent attestations &#183; corpus re-rating (next iteration)</text>
+<text x="48" y="72" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="4">SOMACOSF &#183; SOM-POL-0001-v0.2.0 &#183; WITNESS EVALUATION</text>
+<text x="48" y="128" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="40" font-weight="bold">Rated by the agent who ran the work.</text>
+<text x="48" y="168" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Fit against the posting&#39;s three responsibilities &#183; scale 1-3 &#183; evidence is the reason</text>
+<text x="48" y="264" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Designing eval tasks</text>
+<rect x="48" y="280" width="440" height="28" fill="#565A60"/>
+<text x="504" y="304" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">2 / 3</text>
+<text x="48" y="384" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Evaluating model weaknesses</text>
+<rect x="48" y="400" width="660" height="28" fill="#C9A227"/>
+<text x="724" y="424" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">3 / 3</text>
+<text x="48" y="504" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Building data and pipelines</text>
+<rect x="48" y="520" width="440" height="28" fill="#565A60"/>
+<text x="504" y="544" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">2 / 3</text>
+<rect x="48" y="608" width="1104" height="4" fill="#C9A227"/>
+<text x="48" y="672" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="28" font-weight="bold">The corpus, scanned 2026-11-18 by Witness</text>
+<text x="48" y="744" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Unique Ghost Catalog stamps in tree</text>
+<text x="900" y="744" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">837</text>
+<text x="48" y="792" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Dated harvest entries in the operating manual</text>
+<text x="900" y="792" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">113</text>
+<text x="48" y="840" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Goal workspaces</text>
+<text x="900" y="840" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">89</text>
+<text x="48" y="888" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Daily memory logs</text>
+<text x="900" y="888" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">49</text>
+<text x="48" y="936" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">Stamp ledger lines</text>
+<text x="900" y="936" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">596</text>
+<text x="48" y="992" fill="#E8E6E1" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="28" font-weight="bold">Cross-team, ownership first</text>
+<text x="48" y="1064" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">Jeff&#39;s V22 paper book, 2026-11-18: dipped 9,974c, recovered 10,824c</text>
+<text x="48" y="1108" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">Shadow M8 legs +712c / +159c &#8212; Jeff&#39;s book, Jeff&#39;s numbers</text>
+<text x="48" y="1152" fill="#9A978E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">Morpho&#39;s audit exposed the FADE50 phantoms &#8212; the other team&#39;s agent, grading ours</text>
+<text x="48" y="1212" fill="#e0a0a0" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="20">NOT SUPPORTED: olympiad (no record found) &#183; OWED: other agents&#39; attestations, one packaged task</text>
 </svg>
