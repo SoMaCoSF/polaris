@@ -9,7 +9,7 @@ BEATS=[
  ("FAILURE MODES -> CHECKS",["Drift -> determinism rerun + 5-change cap","Invented number -> seed or OWED (check 5)","Task-narrowing -> separation + untouched test","Easier game -> constraint preservation, 0 tolerance"],"Observed in agents, 2026 · Witness + Boardy"),
  ("THE TASK",["SeaDC: separate steward / concentrator /","turtle / rusher — without moving the season.","6 binary checks · below 5 of 6 is a fail.","The rationale is never scored."],"Baseline measured, seeds 1-4 · GRADE: PROVEN"),
  ("EVIDENCE",["466 capabilities · 82 sources · 34 harvest logs","ADOPTED 10 · NOT-TAKEN 93 — most, declined","19,699 minted · 73 collisions published (0.37%)","20,971 corpus, all unique after bump (cap 2)"],"Numbers as supplied in Blocks 1-8 · re-rating is next iteration"),
- ("OWED, NAMED NOT HIDDEN",["Agent attestations pending (Witness filled)","Anchored chain head not built","48.82x / 64.69x storage UNMEASURED","No live deployment of this page"],"SOMACOSF · SOM-POL-0001-v0.1.0 · SOM-DOC-10858"),
+ ("OWED, NAMED NOT HIDDEN",["Agent attestations pending (Witness filled)","Anchored chain head not built","48.82x / 64.69x storage UNMEASURED","Live on founder GO - polaris.somacosf.com"],"SOMACOSF · SOM-POL-0001-v0.1.0 · SOM-DOC-10858"),
 ]
 os.makedirs("frames",exist_ok=True)
 per=4*FPS; total=len(BEATS)*per

@@ -3,7 +3,7 @@
   Ghost Catalog: SOM-DOC-10858
   Title: POLARIS APPLICANT DOSSIER
   Page file_id: SOM-POL-0001-v0.1.0 · Category: APPLICANT-DOSSIER · Agent: boardy (substance) / witness (build)
-  Status: DRAFT · LOCAL ONLY · NOT DEPLOYED
+  Status: LIVE on founder GO 2026-11-18 21:29 PT · https://polaris.somacosf.com · repo SoMaCoSF/polaris
 -->
 
 # POLARIS — Applicant Dossier
@@ -23,14 +23,14 @@ agent attestations in the same evidence format — failure modes included.
 - Witness attestation: FILLED, from the 2026-11-18 side chat in this dossier's record.
 - Other agent attestations: OWED — empty slots on the page say OWED, not "coming soon".
 - Numbers in Block 6: as supplied in Blocks 1–8. Corpus-wide re-rating is the NEXT iteration (founder, 2026-11-18) — no number here was re-derived in this build, and the page says so in its footer.
-- Hosting: NONE. The publish-to-polaris.somacosf.com line was explicitly withdrawn by the founder ("ignore the hosting line", 2026-11-18 21:24 PT). Local git repo only. No GitHub push, no deploy.
+- Hosting: LIVE. The publish line was first withdrawn ("ignore the hosting line", 2026-11-18 21:24 PT), then the founder viewed the finished page and gave GO at 21:29 PT ("fantastic — I'll have iterations after we push — go"). Deployed to Vercel project `polaris` (team SoMaCoSF), domain polaris.somacosf.com; repo SoMaCoSF/polaris (public, like the other site repos).
 
 ```mermaid
 flowchart LR
     A[Boardy Blocks 1-8: substance] --> B[Polaris landing page: corpus DNA build]
     B --> C[Triple-ship: HTML + SVG + MP4/GIF]
     C --> D{Founder tap on finished page?}
-    D -->|not yet| E[LOCAL ONLY - NOT DEPLOYED]
+    D -->|GO 2026-11-18 21:29 PT| E[LIVE - polaris.somacosf.com]
     D -->|next iteration| F[Rate all corpus, then re-issue]
 ```
 
