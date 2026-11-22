@@ -36,6 +36,12 @@ flowchart LR
     D -->|next iteration| F[Rate all corpus, then re-issue]
 ```
 
+## Deployment receipt — v0.5.0 (2026-11-21)
+- Founder tap 16:20 PT ("Deploy dossier v0.5 now"). Commit 220b192 pushed to master (git-linked deploy).
+- Content: §08 Adherence Board brought current with the four scored generations (G1 PASS/PASS, A7 PARTIAL · G3 PARTIAL / PASS as scoped, Windows runtime UNVERIFIED · G5 PASS, run 1 retired / run 2 recovered · persistence addendum PASS / PROMOTE); §05 eval-task evidence + §08 entry 1 carry the timed live-model run of eval-task #1 (cold-start frontier agent, prompt + fixtures only, held-out checker 90/90 Witness-run, report 10/10, total 100/100, ~2 min vs 3–6h estimate, calibration finding stated on the page); footer OWED refreshed (packaged-task line closed, horizon-binding variant owed; attestations still OWED). Ratings held 2-3-2.
+- Verified from outside: https://polaris.somacosf.com/ 200, sha1 8a7a7dd119dd788ac355d979fefd2b7dc4835262 byte-identical to site/index.html; name occurrences on the live page: 0; trading tokens 0; v0.5.0 / board-current / 100/100 / PROMOTE markers present.
+- Application submission: still NOT sent — founder tap, targeted end of Sunday 2026-11-22. Weekend tracker: WEEKEND-SUBMISSION-TRACKER.md (SOM-DOC-10917, local).
+
 ## Deployment receipt — v0.4.0 (2026-11-18)
 - Founder correction 22:51 PT: v0.3.0 rated the wrong corpus — a private workstream carried as headline evidence. That workstream is removed from the page entirely (verified 0 mentions live: kalshi / polymarket / trading / paper desk / fade). v0.4.0 rates the engineering build: GYST proofs, Atlas + i3, SCPM, estate + Says, Spoken ITPM — every figure read from its source artifact the same night.
 - Commit 8b8c800 pushed to master (git-linked deploy)
